@@ -2,35 +2,17 @@
 import GoogleLogo from "../components/GoogleLogo.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import SearchIcon from "../components/SearchIcon.astro";
-import MicrophoneIcon from "../components/MicrophoneIcon.astro";
-import CameraIcon from "../components/CameraIcon.astro";
-import GoogleButton from "../components/GoogleButton.astro";
+import GoogleButtonsList from "../components/GoogleButtonsList.astro";
+import GoogleSearchInput from "../components/GoogleSearchInput.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Google">
   <Header />
+
   <main class="h-60 mt-60 flex items-center justify-center flex-col gap-6">
     <GoogleLogo />
-
-    <section
-      class="w-[80%] rounded-full flex items-center justify-center py-[0.8rem] px-4 border-2 border-input-border gap-2 hover:bg-hover-input hover:border-hover-outline-input"
-    >
-      <SearchIcon />
-      <input
-        type="text"
-        class="w-[100%] bg-transparent caret-white text-white focus:outline-none"
-      />
-      <div class="flex items-center gap-4 max-h-[35px]">
-        <MicrophoneIcon />
-        <CameraIcon />
-      </div>
-    </section>
-
-    <section class="flex gap-6">
-      <GoogleButton text="Buscar con Google" />
-      <GoogleButton text="Voy a tener suerte" />
-    </section>
+    <GoogleSearchInput />
+    <GoogleButtonsList />
 
     <p class="text-[#bdc1c6] font-semibold text-sm">
       Ofrecido por Google en: <a href="#" class="text-[#8ab4f8]">English</a>
