@@ -1,0 +1,19 @@
+---
+import CameraIcon from "./CameraIcon.astro";
+import MicrophoneIcon from "./MicrophoneIcon.astro";
+import SearchIcon from "./SearchIcon.astro";
+---
+
+<section
+  class="w-[80%] rounded-full flex items-center justify-center py-[0.8rem] px-4 border-[1px] border-input-border gap-2 hover:bg-hover-input hover:border-hover-outline-input sm:w-[70%] md:w-[65%] lg:w-[70%] xl:w-[40%]"
+>
+  <SearchIcon />
+  <input
+    type="text"
+    class="w-[100%] bg-transparent caret-white text-white focus:outline-none"
+  />
+  <div class="flex items-center gap-4 max-h-[35px]">
+    <MicrophoneIcon />
+    <CameraIcon />
+  </div>
+</section>
