@@ -1,0 +1,26 @@
+---
+import HeaderLink from "../layouts/HeaderLink.astro";
+import HeaderNav from "../layouts/HeaderNav.astro";
+import HeaderIcon from "./HeaderIcon.astro";
+import UserThumbnail from "./UserThumbnail.astro";
+---
+
+<header class="p-2">
+  <!-- I'm lazy, i don't want to modify the HeaderNav component 🤫 -->
+  <nav class="flex items-center justify-end gap-6">
+    <div class="flex items-center gap-4 text-white">
+      <a href="#" class="text-sm font-semibold">Gmail</a>
+      <a href="#" class="text-sm font-semibold">Imágenes</a>
+    </div>
+
+    <HeaderNav>
+      <HeaderLink>
+        <HeaderIcon />
+      </HeaderLink>
+
+      <HeaderLink>
+        <UserThumbnail />
+      </HeaderLink>
+    </HeaderNav>
+  </nav>
+</header>
